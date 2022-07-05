@@ -31,12 +31,12 @@ void BellmanFord(struct Graph* graph, int src)
     int v = graph->v; 
     int E = graph->E; 
     int dist[v]; 
-    //Initalizing to infinity
+    
     for (int i = 0; i < v; i++) 
         dist[i] = INT_MAX; 
     dist[src] = 0; 
   
-    //Relaxing all edges |V| - 1 times.
+    
     for (int i = 1; i <= v - 1; i++) { 
         for (int j = 0; j < E; j++) { 
             int u = graph->edge[j].src; 
